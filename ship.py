@@ -24,7 +24,7 @@ class Ship():
         return self.name
 
     def update(self) -> str:
-        pass
+        self.log = [f"SHIP: {self.name}"]
 
     def move(self, dest: Planet) -> None:
         """

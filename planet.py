@@ -23,6 +23,9 @@ class Planet():
         return self.name
 
     def update(self) -> str:
+        """
+        Simulate production, consumption, and ships for one time tick
+        """
         self.log = [f"UPDATE: {self.name}"]
         for p in self.production.keys():
             self.inventory[p] += self.production[p]
