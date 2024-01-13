@@ -17,7 +17,7 @@ class Planet():
         self.consumption = consumption
         self.inventory = {}
         self.rqs = {}
-        self.log = []
+        self.log = [f"PLANET: {self.name} initialized"]
 
     def __str__(self):
         return self.name
@@ -26,7 +26,7 @@ class Planet():
         """
         Simulate production, consumption, and ships for one time tick
         """
-        self.log = [f"UPDATE: {self.name}"]
+        self.log.append(f"UPDATE: {self.name}")
         for p in self.production.keys():
             self.inventory[p] += self.production[p]
             self.log.append(f"{p} = {self.inventory[p]}")
